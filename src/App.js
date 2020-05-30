@@ -6,7 +6,10 @@ import Button from './components/Button';
 import Input from './components/Input';
 import ClearButton from './components/ClearButton';
 import AddButton from './components/AddButton/AddButton';
-import Image from './Image/wheeljpg.jpg'
+import Image from './Image/wheeljpg.jpg';
+
+import DeleteIcon from '@material-ui/icons/Delete';
+
 class App extends Component {
 
 
@@ -18,7 +21,11 @@ class App extends Component {
   }
 
 
-
+  generateRandom = () =>{
+    let randomNumber = Math.floor(100000 + Math.random() * 900000)
+    console.log(randomNumber);
+    this.props.onGenerateRandom(randomNumber);
+  }
 
   render() {
     return (
@@ -45,9 +52,11 @@ class App extends Component {
               <Button handleClick={this.props.onAddToInput}>3</Button>
             </div>
             <div className="row">
-              {/* <Button>Empty</Button> */}
+            
+              <Button handleClick={this.props.onBackspace}>x</Button>
               <Button handleClick={this.addZeroToInput}>0</Button>
               <ClearButton handleClear={this.props.onClearInput}>Clear</ClearButton>
+             
             </div>
 
 
@@ -56,16 +65,19 @@ class App extends Component {
 
             </div>
 
-
+           
             <ul>
               {this.props.storedResults.map(strResult => (
+                // <div className="result">
                 <li
                   className="result"
                   key={strResult.id}
-                  onClick={() => this.props.onDeleteResult(strResult.id)}
+                  
                 >
+                  <DeleteIcon className="delete-icon" onClick={() => this.props.onDeleteResult(strResult.id)} />
                   {strResult.value}
                 </li>
+                // </div>
               ))}
             </ul>
           </div>
@@ -80,7 +92,7 @@ class App extends Component {
             <img
               src={Image}
               className="image"
-              onClick={this.props.onGenerateRandom}
+              onClick={this.generateRandom}
             />
             <div className="box-heading">
               <h4> Ticket number range : 100000-999999</h4>
@@ -109,9 +121,10 @@ const mapDispatchToProps = dispatch => {
     onClearInput: () => dispatch({ type: 'clearInput' }),
 
     onStoreResult: (result) => dispatch({ type: 'storeResult', result: result }),
-    onGenerateRandom: () => dispatch({ type: 'generateRandom' }),
+    onGenerateRandom: (val) => dispatch({ type: 'generateRandom', randomNumber: val }),
 
-    onDeleteResult: (id) => dispatch({ type: 'deleteResult', resultElId: id })
+    onDeleteResult: (id) => dispatch({ type: 'deleteResult', resultElId: id }),
+    onBackspace: (e) => dispatch({ type: 'backspace', val: e })
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App);

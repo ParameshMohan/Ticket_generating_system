@@ -1,59 +1,73 @@
 .App {
+  
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-  margin-top: 100px;
+margin-top: 100px ;
 }
 
-.wrapper {
-  width: 1000px;
+.wrapper{
+  width:1000px;
   height: 630px;
-  display: flex;
-  margin: 5px;
-  background-color: rgb(52, 172, 228);
+display: flex;
+margin: 5px;
+background-color: rgb(52, 172, 228);
+   
 }
 
-.row {
-  display: flex;
+.row{
+  display:flex;
   width: 100%;
 }
-.image {
+.image{
   height: 100%;
-  flex: 1;
+  flex:1;
   width: 100%;
+ 
+  
 }
-.group {
-  padding: 10px;
-  width: 50;
-  height: 100%;
-  border: 10px;
+.group{
+ padding: 10px;
+ width: 50;
+ height: 100%;
+border: 10px;
 }
 
 .heading {
-  width: 500%;
-  height: 80%;
+ width: 500%; 
+ height: 80%;
 }
 
-.box-heading {
+.box-heading{
   width: 59%;
   outline: black;
   background-color: #ffff;
   color: red;
-  justify-content: center;
-  align-items: center;
+justify-content: center;
+align-items: center;
 }
-.result {
-  display: flex;
-  height: 1.2em;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  font-weight: lighter;
-  font-size: 1.4em;
-  background-color: #168f26;
-  color: #ffff;
-  outline: 1px solid rgb(17, 4, 4);
-  padding: 10px;
-  margin: 10px;
+.result{
+display: inline-flexbox;
+ height: 1.2em;
+ flex: 1;
+
+ justify-content: center;
+ align-items: center; 
+ font-weight: lighter;
+ font-size: 1.4em;
+ background-color: #168f26;
+ color: #ffff;
+ outline: 1px solid rgb(17, 4, 4);
+ padding: 10px;
+ margin: 10px;
+
 }
+.delete-icon{
+  left: 5px;
+  float: left;
+  
+}
+/* .ticket-div{
+
+} */
