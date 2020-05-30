@@ -65,7 +65,7 @@ display: inline-flexbox;
 }
 .delete-icon{
   left: 5px;
-  float: left;
+  float: right;
   
 }
 /* .ticket-div{

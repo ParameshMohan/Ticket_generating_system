@@ -29,23 +29,17 @@ const reducer = (state = initialState, action) => {
         case 'generateRandom':
             return {
                 ...state,
-                input:action.randomNumber
+                input: action.randomNumber
             }
-            case 'backspace':
-                console.log(state.input.length)
-                let result='';
-                let a= state.input.toString();
-                if(a.length === 6){
-                   let n = state.input.length;
-                  result =  state.input.slice(0, -1);
-                }
-                else{
-                    result = state.input.slice(0, -1)
-                }
-                return {
-                    ...state,
-                    input: result
-                }
+        case 'backspace':
+            console.log(state.input)
+            let result = '';
+            let a = state.input.toString();
+            result = a.slice(0, -1)
+            return {
+                ...state,
+                input: result
+            }
 
         case 'storeResult':
             // console.log('storeResult', action.result)
@@ -79,7 +73,7 @@ const reducer = (state = initialState, action) => {
                 results: updatedArray
 
             }
-      
+
     }
 
 
