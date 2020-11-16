@@ -7,6 +7,7 @@ import Input from './components/Input';
 import ClearButton from './components/ClearButton';
 import AddButton from './components/AddButton/AddButton';
 import Image from './Image/wheeljpg.jpg';
+import Testing from './components/test/testing';
 
 import DeleteIcon from '@material-ui/icons/Delete';
 
@@ -98,7 +99,7 @@ class App extends Component {
               <h4> Ticket number range : 100000-999999</h4>
             </div>
 1st line i am done
-2nd line changed
+<Testing />
 3rd line changed
           </div>
         </div>
