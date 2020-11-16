@@ -98,8 +98,8 @@ class App extends Component {
               <h4> Ticket number range : 100000-999999</h4>
             </div>
 1st line i am done
-changed this one
-changed this too
+2nd line result
+3rd line result
           </div>
         </div>
       </div>
