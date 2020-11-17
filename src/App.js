@@ -8,6 +8,7 @@ import ClearButton from './components/ClearButton';
 import AddButton from './components/AddButton/AddButton';
 import Image from './Image/wheeljpg.jpg';
 import Testing from './components/test/testing';
+import Testing2 from './components/test2/testing2';
 
 import DeleteIcon from '@material-ui/icons/Delete';
 
@@ -100,6 +101,7 @@ class App extends Component {
             </div>
 1st line i am done
 <Testing />
+<Testing2 />
 3rd line changed
           </div>
         </div>
