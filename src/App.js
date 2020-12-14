@@ -100,6 +100,11 @@ class App extends Component {
 1st line i am done
 2nd line i am done
 3rd line i am done
+
+i am master 
+i m the head
+i am chanding this 
+
           </div>
         </div>
       </div>
