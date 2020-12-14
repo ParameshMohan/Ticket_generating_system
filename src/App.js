@@ -101,13 +101,7 @@ class App extends Component {
 2nd line i am done
 3rd line i am done
 
-i am master 
-i m the head
-i am chanding this 
 
-this 3rd time
-i am want this 
-comiit to be tested
 
           </div>
         </div>
