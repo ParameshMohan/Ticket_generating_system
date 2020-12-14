@@ -102,8 +102,9 @@ class App extends Component {
 3rd line i am done
 
 
-last for git merge 
-we will see
+git pull
+git pullgit push 
+git pull
           </div>
         </div>
       </div>
